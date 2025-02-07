@@ -3,10 +3,14 @@
 .header {
   width: 100%;
   padding: 1.2rem 0;
-  background: linear-gradient(90deg, #FFA500, #FF7F50);
-  color: #fff;
+  /* 따뜻한 토스트 느낌의 그라데이션: 연한 베이지 ~ 살구색 */
+  background: linear-gradient(90deg, #FFF3E0, #FFE0B2);
+  /* 텍스트 색상은 따뜻한 브라운 계열로 설정 */
+  color: #4E342E;
   text-align: center;
   font-size: 1.8rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-weight: bold;
+  letter-spacing: 0.05em;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }

@@ -1,17 +1,12 @@
-/* src/styles/GoalInput.css */
-
 .goal-input-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 2rem 0;
+  gap: 0.5rem;
 }
 
 .goal-input-field {
-  width: 80%;
-  max-width: 400px;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.75rem;
   border: 2px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
@@ -19,24 +14,22 @@
 }
 
 .goal-input-field:focus {
-  border-color: #FFA500;
+  border-color: var(--primary-color);
   outline: none;
 }
 
-.goal-input-button {
-  padding: 0.8rem 1.5rem;
-  background-color: #FFA500;
+.goal-input-save-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: var(--primary-color);
   color: #fff;
   border: none;
-  border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.goal-input-button:hover {
-  background-color: #FF7F50;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.goal-input-save-button:hover {
+  background-color: var(--primary-hover);
 }

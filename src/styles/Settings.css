@@ -1,37 +1,84 @@
 /* src/styles/Settings.css */
+
 .settings-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   padding: 2rem;
-  background-color: #FFE4B5;
+  background-color: var(--background-color);
   min-height: 100vh;
+  align-items: center;
+}
+
+/* 카드 스타일: 각 섹션을 카드 형태로 구분 */
+.settings-card {
+  background: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  text-align: left;
+}
+
+.settings-title,
+.settings-info-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+/* 현재 목표 텍스트 */
+.settings-goal-text {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* 버튼 그룹: 목표 수정과 초기화 버튼을 오른쪽 정렬 */
+.settings-button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* 버튼 스타일 */
+.settings-change-button,
+.settings-reset-button,
+.settings-back-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.settings-change-button {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.settings-change-button:hover {
+  background-color: var(--primary-hover);
 }
 
 .settings-reset-button {
-  padding: 0.5rem 1rem;
-  background-color: #f44336;
+  background-color: var(--secondary-color);
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 1rem 0;
 }
 
 .settings-reset-button:hover {
-  background-color: #e53935;
+  background-color: var(--secondary-hover);
 }
 
 .settings-back-button {
-  padding: 0.5rem 1rem;
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
   margin-top: 1rem;
 }
 
 .settings-back-button:hover {
-  background-color: #45a049;
+  background-color: var(--accent-hover);
 }

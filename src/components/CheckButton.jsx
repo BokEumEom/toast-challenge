@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/CheckButton.css';
 
 const CheckButton = ({ onClick }) => {

@@ -1,22 +1,50 @@
-/* src/styles/GoalSetting.css */
 .goal-setting-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   padding: 2rem;
-  background-color: #FFE4B5;
+  background-color: var(--background-color);
   min-height: 100vh;
+  align-items: center;
 }
 
-.goal-setting-back-button {
-  padding: 0.5rem 1rem;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* 카드 스타일 */
+.goal-setting-card {
+  background: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  text-align: left;
+}
+
+.goal-setting-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+/* 팁 텍스트 */
+.goal-setting-tip {
+  font-size: 0.9rem;
+  color: #777;
   margin-top: 1rem;
 }
 
+/* 뒤로가기 버튼 */
+.goal-setting-back-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
 .goal-setting-back-button:hover {
-  background-color: #45a049;
+  background-color: var(--accent-hover);
 }
