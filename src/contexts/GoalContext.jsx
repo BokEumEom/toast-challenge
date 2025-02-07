@@ -36,12 +36,14 @@ export const GoalProvider = ({ children }) => {
     }
   };
 
-  // 목표 완료 시 처리 로직
+  // 목표 완료 시 처리 로직 (함수형 업데이트 사용)
   const handleGoalComplete = () => {
-    const newStreak = streak + 1;
-    setStreak(newStreak);
-    localStorage.setItem('streak', newStreak);
-    updateToastState(newStreak);
+    setStreak((prevStreak) => {
+      const newStreak = prevStreak + 1;
+      localStorage.setItem('streak', newStreak);
+      updateToastState(newStreak);
+      return newStreak;
+    });
   };
 
   // 리셋 버튼 처리

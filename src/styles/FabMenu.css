@@ -1,0 +1,85 @@
+.fab-container {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 100;
+}
+
+.fab-main-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fab-main-button:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+.fab-main-icon {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.fab-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 8px;
+  animation: fabFadeIn 0.3s forwards;
+}
+
+@keyframes fabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fab-action-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 24px;
+  background-color: var(--accent-color);
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fab-action-button:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+.fab-action-icon {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+
+.fab-action-label {
+  font-size: 0.9rem;
+  color: #fff;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}

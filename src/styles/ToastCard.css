@@ -1,0 +1,31 @@
+.toast-card {
+  background: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  text-align: center;
+}
+
+.toast-card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.toast-reset-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toast-reset-button:hover {
+  background-color: var(--secondary-hover);
+}
