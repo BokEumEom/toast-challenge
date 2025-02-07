@@ -27,16 +27,14 @@ const GoalSetting = () => {
     }
   }, [goal]);
 
-  // 목표 저장 시, 히스토리에도 추가 (중복 제거, 최대 5개 저장)
+  // 목표 저장 시, 히스토리에 중복 없이 모두 추가 (제한 없음)
   const handleSaveGoal = (newGoal) => {
     setGoal(newGoal);
     localStorage.setItem('goal', newGoal);
     setGoalHistory((prevHistory) => {
       let updatedHistory = prevHistory.filter((item) => item !== newGoal);
       updatedHistory.unshift(newGoal);
-      if (updatedHistory.length > 5) {
-        updatedHistory = updatedHistory.slice(0, 5);
-      }
+      // 제한을 제거하여 모든 항목 저장
       localStorage.setItem('goalHistory', JSON.stringify(updatedHistory));
       return updatedHistory;
     });
@@ -59,14 +57,16 @@ const GoalSetting = () => {
         <GoalInput onSave={handleSaveGoal} initialGoal={localGoal} />
         <p className="goal-setting-tip">명확하고 달성 가능한 목표를 작성해보세요.</p>
       </div>
-
-      {/* 홈으로 돌아가기 버튼을 상단에 배치 */}
+      
+      {/* 홈으로 돌아가기 버튼 */}
       <button className="goal-setting-back-button" onClick={() => navigate('/')}>
         홈으로 돌아가기
       </button>
       
-      {/* 목표 히스토리 영역은 입력 카드 밖으로 별도 배치 (홈 버튼 아래쪽) */}
-      <GoalHistory history={goalHistory} onSelect={handleHistorySelect} />
+      {/* GoalHistory 영역은 별도의 래퍼로 배치하여, 홈 버튼 아래쪽에 왼쪽 정렬 */}
+      <div className="goal-history-wrapper">
+        <GoalHistory history={goalHistory} onSelect={handleHistorySelect} initialDisplayCount={5} />
+      </div>
     </div>
   );
 };

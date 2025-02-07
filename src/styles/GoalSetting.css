@@ -49,3 +49,10 @@
 .goal-setting-back-button:hover {
   background-color: var(--accent-hover);
 }
+
+/* GoalHistory 영역을 위한 래퍼 */
+.goal-history-wrapper {
+  width: 100%;
+  max-width: 500px;
+  align-self: flex-start; /* 왼쪽 정렬 */
+}
