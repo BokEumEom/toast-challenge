@@ -1,16 +1,10 @@
 /* src/styles/Header.css */
 
-.header {
+.header-banner {
   width: 100%;
-  padding: 1.2rem 0;
-  /* 따뜻한 토스트 느낌의 그라데이션: 연한 베이지 ~ 살구색 */
-  background: linear-gradient(90deg, #FFF3E0, #FFE0B2);
-  /* 텍스트 색상은 따뜻한 브라운 계열로 설정 */
-  color: #4E342E;
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  position: relative;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 150px; /* 원하는 높이로 조정 */
+  background-image: url('/assets/images/banner.png'); /* 배너 이미지 경로 */
+  background-size: contain; /* 이미지 전체가 보이도록 */
+  background-position: center;
+  background-repeat: no-repeat;
 }
