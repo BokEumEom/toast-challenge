@@ -1,0 +1,22 @@
+/* src/styles/GoalSetting.css */
+.goal-setting-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #FFE4B5;
+  min-height: 100vh;
+}
+
+.goal-setting-back-button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.goal-setting-back-button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,37 @@
+/* src/styles/Settings.css */
+.settings-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #FFE4B5;
+  min-height: 100vh;
+}
+
+.settings-reset-button {
+  padding: 0.5rem 1rem;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 1rem 0;
+}
+
+.settings-reset-button:hover {
+  background-color: #e53935;
+}
+
+.settings-back-button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.settings-back-button:hover {
+  background-color: #45a049;
+}

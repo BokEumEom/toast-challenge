@@ -1,0 +1,42 @@
+/* src/styles/Home.css */
+.home-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #FFE4B5;
+  min-height: 100vh;
+}
+
+/* 버튼 스타일 (공통 버튼은 index.css의 기본 버튼 스타일에 추가) */
+.home-button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #45a049;
+}
+
+.home-reset-button {
+  padding: 0.5rem 1rem;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-reset-button:hover {
+  background-color: #e53935;
+}
+
+.home-text {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,14 @@
+/* src/styles/ToastDisplay.css */
+
+.toast-image {
+  width: 220px;
+  height: 220px;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.toast-image:hover {
+  transform: scale(1.05);
+}

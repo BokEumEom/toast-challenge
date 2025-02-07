@@ -1,0 +1,12 @@
+/* src/styles/Header.css */
+
+.header {
+  width: 100%;
+  padding: 1.2rem 0;
+  background: linear-gradient(90deg, #FFA500, #FF7F50);
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}

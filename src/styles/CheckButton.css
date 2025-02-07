@@ -1,0 +1,21 @@
+/* src/styles/CheckButton.css */
+
+.check-button {
+  padding: 1rem 2rem;
+  background-color: #FFA500;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.check-button:hover {
+  background-color: #FF7F50;
+}
+
+.check-button:active {
+  transform: scale(0.98);
+}
