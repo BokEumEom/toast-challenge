@@ -49,7 +49,7 @@ const Home = () => {
         </h2>
         <p>{goal || '목표가 설정되지 않았습니다.'}</p>
         <button className="home-button" onClick={() => navigate('/goal')}>
-          목표 수정
+          목표 설정
         </button>
       </div>
 

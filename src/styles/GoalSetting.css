@@ -1,3 +1,5 @@
+/* src/styles/GoalSetting.css */
+
 .goal-setting-container {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
   align-items: center;
 }
 
-/* 카드 스타일 */
+/* 목표 입력 카드 스타일 */
 .goal-setting-card {
   background: var(--card-bg-color);
   border-radius: 12px;
@@ -25,7 +27,6 @@
   color: var(--text-color);
 }
 
-/* 팁 텍스트 */
 .goal-setting-tip {
   font-size: 0.9rem;
   color: #777;
