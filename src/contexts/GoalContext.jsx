@@ -23,13 +23,19 @@ export const GoalProvider = ({ children }) => {
     }
   }, []);
 
-  // 스트릭에 따른 토스트 상태 업데이트 함수
+  // 스트릭에 따른 토스트 상태 업데이트 함수 (단계별 조건 적용)
   const updateToastState = (newStreak) => {
     if (newStreak >= 7) {
-      setToastState('perfect');
+      setToastState('special');
+    } else if (newStreak >= 6) {
+      setToastState('milk');
+    } else if (newStreak >= 5) {
+      setToastState('cream');
+    } else if (newStreak >= 4) {
+      setToastState('honey');
     } else if (newStreak >= 3) {
       setToastState('golden');
-    } else if (newStreak > 0) {
+    } else if (newStreak >= 2) {
       setToastState('light');
     } else {
       setToastState('default');
