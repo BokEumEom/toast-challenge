@@ -1,6 +1,7 @@
 // src/components/Modal.jsx
 import { useState, useEffect } from 'react';
 import Lottie from 'lottie-react';
+import { XCircleIcon } from '@heroicons/react/24/solid'; // 닫기 아이콘
 import '../styles/Modal.css';
 
 const Modal = ({
@@ -28,33 +29,45 @@ const Modal = ({
     { label: "초코 바나나 크림 토스트 🍫", src: "/assets/images/choco_banana_cream_toast.webp" },
   ];
 
-  // "레시피 보기" 버튼을 누르면 무작위로 한 레시피 선택
-  const toggleRecipe = () => {
+  // "레시피 보기" 버튼을 누르면 무작위로 한 레시피 선택 및 표시
+  const showRecipeHandler = () => {
     if (!showRecipe) {
       const randomIndex = Math.floor(Math.random() * recipes.length);
       setSelectedRecipe(recipes[randomIndex]);
-    } else {
-      setSelectedRecipe(null);
+      setShowRecipe(true);
     }
-    setShowRecipe(prev => !prev);
+  };
+
+  // 모달을 닫을 때 레시피 상태 초기화
+  const handleClose = () => {
+    setShowRecipe(false);
+    setSelectedRecipe(null);
+    onClose();
   };
 
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay" onClick={handleClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        {/* 닫기 아이콘: 우측 상단에 배치 */}
+        <div className="modal-close-icon" onClick={handleClose}>
+          <XCircleIcon className="close-icon" />
+        </div>
         {animationData && !showRecipe && (
           <Lottie animationData={animationData} loop={false} className="modal-lottie" />
         )}
         <h2 className="modal-title">{title}</h2>
         <p className="modal-message">{message}</p>
-        <button 
-          className="modal-view-recipe-button" 
-          onClick={toggleRecipe}
-        >
-          {showRecipe ? "레시피 숨기기" : "레시피 보기"}
-        </button>
+        {/* 레시피 보기 버튼은 레시피가 보이지 않을 때만 표시 */}
+        {!showRecipe && (
+          <button 
+            className="modal-view-recipe-button" 
+            onClick={showRecipeHandler}
+          >
+            레시피 보기
+          </button>
+        )}
         {showRecipe && selectedRecipe && (
           <div className="modal-recipe-container">
             <img 
@@ -65,9 +78,6 @@ const Modal = ({
             <p className="modal-recipe-label">{selectedRecipe.label}</p>
           </div>
         )}
-        <button className="modal-close-button" onClick={onClose}>
-          닫기
-        </button>
       </div>
     </div>
   );

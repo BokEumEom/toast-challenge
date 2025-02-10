@@ -1,33 +1,4 @@
 /* src/styles/Modal.css */
-
-/* 기존 스타일은 그대로 유지하면서, 레시피 보기와 닫기 버튼 스타일을 CheckButton과 동일하게 적용 */
-
-.modal-view-recipe-button,
-.modal-close-button {
-  padding: 1rem 2rem;
-  background-color: #FFA500;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 1rem; /* 필요에 따라 간격 조정 */
-}
-
-.modal-view-recipe-button:hover,
-.modal-close-button:hover {
-  background-color: #FF7F50;
-}
-
-.modal-view-recipe-button:active,
-.modal-close-button:active {
-  transform: scale(0.98);
-}
-
-/* 나머지 기존 Modal.css 스타일들 */
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -52,6 +23,25 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* 닫기 아이콘 스타일: 모달 콘텐츠의 우측 상단에 위치 */
+.modal-close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.modal-close-icon:hover {
+  transform: scale(1.1);
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--secondary-color); /* 전역 변수로 정의된 색상 사용 */
+}
+
 .modal-lottie {
   width: 150px;
   height: 150px;
@@ -70,6 +60,26 @@
   color: #333;
 }
 
+/* "레시피 보기" 버튼 스타일 (체크 버튼 스타일과 동일) */
+.modal-view-recipe-button {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;  /* 버튼과 콘텐츠 사이의 간격 */
+  padding: 1rem 2rem;
+  background-color: #FFA500;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-view-recipe-button:hover {
+  background-color: #FF7F50;
+}
+
+/* 레시피 영역 스타일 */
 .modal-recipe-container {
   display: flex;
   flex-direction: column;
@@ -78,8 +88,8 @@
 }
 
 .modal-recipe-image {
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
